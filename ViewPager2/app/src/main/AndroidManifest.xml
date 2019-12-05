@@ -22,7 +22,7 @@
         android:icon="@drawable/app_sample_code"
         android:label="@string/activity_sample_code"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:theme="@style/Theme.LE.App.EdgeToEdge">
 
         <activity android:name=".CardViewActivity">
             <intent-filter>

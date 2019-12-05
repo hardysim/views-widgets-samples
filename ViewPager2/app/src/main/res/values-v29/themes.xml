@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.LE.App.EdgeToEdge">
+        <!-- fully transparent with dark icons (via `windowLightNavigationBar`) and no scrim (via `enforceNavigationBarContrast`) -->
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+
+</resources>
