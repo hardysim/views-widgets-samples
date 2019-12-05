@@ -42,6 +42,8 @@ class ParallelNestedScrollingActivity : Activity() {
             adapter = VpAdapter()
         }
         setContentView(viewPager)
+
+        findViewById<View>(android.R.id.content).goEdgeToEdge()
     }
 
     class VpAdapter : RecyclerView.Adapter<VpAdapter.ViewHolder>() {
@@ -56,6 +58,9 @@ class ParallelNestedScrollingActivity : Activity() {
             return ViewHolder(root).apply {
                 rv1.setUpRecyclerView(RecyclerView.HORIZONTAL)
                 rv2.setUpRecyclerView(RecyclerView.VERTICAL)
+
+                rv2.addSystemWindowInsetToPadding(bottom = true)
+                efab.addSystemWindowInsetToMargin(bottom = true)
             }
         }
 
