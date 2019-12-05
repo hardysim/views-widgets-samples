@@ -31,6 +31,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.ORIENTATION_HORIZONTAL
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class ParallelNestedScrollingActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,6 +75,7 @@ class ParallelNestedScrollingActivity : Activity() {
             val title: TextView = itemView.findViewById(R.id.page_title)
             val rv1: RecyclerView = itemView.findViewById(R.id.first_rv)
             val rv2: RecyclerView = itemView.findViewById(R.id.second_rv)
+            val efab: ExtendedFloatingActionButton = itemView.findViewById(R.id.efab)
         }
     }
 

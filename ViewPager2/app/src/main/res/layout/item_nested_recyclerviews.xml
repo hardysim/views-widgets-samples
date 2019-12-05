@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2019 The Android Open Source Project
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2019 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,64 +13,82 @@
      limitations under the License.
 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/page_title"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/spacer_large"
-        android:layout_marginRight="@dimen/spacer_large"
-        android:layout_marginTop="@dimen/spacer_large"
-        android:gravity="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        tools:text="Page 1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/first_rv"
-        android:textStyle="bold" />
-
-    <androidx.viewpager2.integration.testapp.NestedScrollableHost
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/first_rv"
+        <TextView
+            android:id="@+id/page_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF" />
-    </androidx.viewpager2.integration.testapp.NestedScrollableHost>
+            android:layout_marginLeft="@dimen/spacer_large"
+            android:layout_marginTop="@dimen/spacer_large"
+            android:layout_marginRight="@dimen/spacer_large"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:text="Page 1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/second_rv"
-        android:textStyle="bold" />
-
-    <androidx.viewpager2.integration.testapp.NestedScrollableHost
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/second_rv"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF" />
-    </androidx.viewpager2.integration.testapp.NestedScrollableHost>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/first_rv"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <androidx.viewpager2.integration.testapp.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/first_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF" />
+        </androidx.viewpager2.integration.testapp.NestedScrollableHost>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/second_rv"
+            android:textStyle="bold" />
+
+        <androidx.viewpager2.integration.testapp.NestedScrollableHost
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/second_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
+        </androidx.viewpager2.integration.testapp.NestedScrollableHost>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/efab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="fab"
+        app:icon="@drawable/jetpack_logo" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
