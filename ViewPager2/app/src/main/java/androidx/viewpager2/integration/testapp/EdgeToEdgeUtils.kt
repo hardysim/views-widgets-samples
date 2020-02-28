@@ -24,6 +24,8 @@ fun View.addSystemWindowInsetToPadding(
 
         insets
     }
+
+    requestApplyInsetsOnAttach()
 }
 
 fun View.addSystemWindowInsetToMargin(
@@ -45,6 +47,15 @@ fun View.addSystemWindowInsetToMargin(
 
         insets
     }
+
+    requestApplyInsetsOnAttach()
+}
+
+private fun View.requestApplyInsetsOnAttach() {
+    addOnAttachStateChangeListener(object : View.OnAttachStateChangeListener {
+        override fun onViewDetachedFromWindow(v: View) {}
+        override fun onViewAttachedToWindow(v: View) = v.requestApplyInsets()
+    })
 }
 
 fun View.goEdgeToEdge() {
